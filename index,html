@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Example</title>
+</head>
+<body>
+
+    <script>
+        // Use JavaScript to fetch and inject content from './public/index.html'
+        fetch('./public/index.html')
+            .then(response => response.text())
+            .then(html => {
+                document.body.innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error loading content:', error);
+            });
+    </script>
+
+</body>
+</html>
